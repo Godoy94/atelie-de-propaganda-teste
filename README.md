@@ -19,6 +19,7 @@ Aplicação em Angular desenvolvida como teste para desenvolvedor front end
 O projeto foi estruturado da seguinte forma:
 
 src >
+    
     assets> Contém imagens e outros recursos estáticos.
     
     components> Armazena componentes reutilizáveis da aplicação.
