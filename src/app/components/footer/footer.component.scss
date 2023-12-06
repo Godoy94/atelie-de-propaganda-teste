@@ -1,0 +1,119 @@
+.footer {
+    background: url('../../assets/background-cinza.png');
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h1 {
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 13px;
+        color: #9c9c9c;
+        text-align: justify;
+    }
+    img {
+        width: 180px;
+    }
+
+    .container {
+        max-width: 1000px;
+        padding: 90px;
+
+        display: flex;
+        flex-direction: row;
+
+        .footer-left {
+            margin-right: 150px;
+        }
+    }
+
+    .footer-bottom {
+        background-color: #e8a91b;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 50px;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 50px;
+
+        p {
+            color: #FFF;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    @media only screen and (max-width: 992px) {
+        .container {
+            .footer-right {
+                align-items: center;
+                display: flex;
+            }
+        }
+        .footer-bottom {
+            height: 70px;
+            p {
+                text-align: center;
+                margin: 0 20px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .container {
+            .footer-right {
+                align-items: center;
+                display: flex;
+            }
+
+        }
+
+        .footer-bottom {
+            height: 70px;
+            p {
+                text-align: center;
+                margin: 0 20px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .footer-left {
+                align-items: center;
+                justify-content: center;
+                margin-right: 0;
+            }
+            .footer-right {
+                margin: 30px 0px 0px 0px;
+            }
+        }
+        .footer-bottom {
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 2rem 1rem;
+
+            p {
+                text-align: center;
+                margin: 0 20px;
+            }
+        }
+    }
+}

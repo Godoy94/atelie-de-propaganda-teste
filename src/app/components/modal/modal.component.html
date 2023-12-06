@@ -1,0 +1,12 @@
+<div class="overlay" *ngIf="showModal">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close" (click)="closeModal()"
+        ><img src="../../assets/close.svg" alt=""
+      /></span>
+    </div>
+    <div class="modal-content">
+        <ng-content></ng-content>   
+    </div>
+  </div>
+</div>

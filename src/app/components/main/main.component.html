@@ -1,0 +1,132 @@
+<section class="main" id="main">
+  <div id="loginForm" class="form-login" *ngIf="formType === 'login'">
+    <h1>Login</h1>
+
+    <div class="form-login-data">
+      <input type="text" placeholder="Digite seu CPF" />
+      <input type="password" placeholder="Digite sua senha" />
+    </div>
+
+    <div class="form-login-questions">
+      <p (click)="showRegisterForm()">Ainda não é cadastrado?</p>
+      <p>Esqueceu sua senha?</p>
+    </div>
+
+    <div class="form-login-button">
+      <button>Entrar</button>
+    </div>
+  </div>
+
+  <div id="registerForm" class="form-register" *ngIf="formType === 'cadastro'">
+    <div class="form-register-header">
+      <h1>Cadastre-se</h1>
+      <p>
+        Preencha os campos abaixo para validar sua participação na campanha e
+        concorrer aos prêmios
+      </p>
+    </div>
+
+    <form>
+      <div class="form-register-data-name">
+        <label for="">Nome</label>
+        <input
+          id="name"
+          [(ngModel)]="user.name"
+          name="name"
+          required
+          type="text"
+          placeholder="Nome"
+        />
+      </div>
+
+      <div class="form-register-data">
+        <div class="align-line">
+          <label for="">CPF</label>
+          <input
+            id="tax_id"
+            [(ngModel)]="user.tax_id"
+            name="tax_id"
+            required
+            type="text"
+            placeholder="CPF"
+          />
+        </div>
+
+        <div class="align-line">
+          <label for="">E-mail</label>
+          <input
+            id="email"
+            [(ngModel)]="user.email"
+            name="email"
+            required
+            type="text"
+            placeholder="E-mail"
+          />
+        </div>
+      </div>
+
+      <div class="form-register-data">
+        <div class="align-line">
+          <label for="">Senha</label>
+          <input
+            id="password"
+            [(ngModel)]="user.password"
+            name="password"
+            required
+            type="text"
+            placeholder="Senha"
+          />
+        </div>
+
+        <div class="align-line">
+          <label for="">Confirme sua senha</label>
+          <input
+            id="password_confirmation"
+            [(ngModel)]="user.password_confirmation"
+            name="password_confirmation"
+            required
+            type="text"
+            placeholder="Confirme sua senha"
+          />
+        </div>
+      </div>
+
+      <div class="form-register-data">
+        <div class="align-line">
+          <label for="">Empresa</label>
+          <input
+            id="company"
+            [(ngModel)]="user.company"
+            name="company"
+            required
+            type="text"
+            placeholder="Empresa"
+          />
+        </div>
+        <div class="form-register-data-select">
+        <div class="align-line-select">
+          <label for="classificacao">Classificação</label>
+          <select id="classificacao" name="classificacao" [(ngModel)]="user.segment" required>
+            <option disabled selected hidden value="">Selecione a Classificação</option>
+            <option *ngFor="let classificacao of classificacoes" [value]="classificacao">
+              {{ classificacao }}
+            </option>
+          </select>
+        </div>
+        </div>
+      </div>
+
+      <div class="form-register-button">
+        <button type="button" (click)="registerUser()">Enviar</button>
+      </div>
+    </form>
+
+    <div class="form-register-question">
+      <p (click)="showLoginForm()">Voltar ao Login?</p>
+    </div>
+  </div>
+
+  <app-modal class="" [showModal]="isModalOpen" (closeModalEvent)="closeModal()">
+    <p>Cadastro realizado com sucesso!</p>
+  </app-modal>
+</section>

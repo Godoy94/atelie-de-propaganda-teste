@@ -1,0 +1,36 @@
+.overlay {
+    background: #00000049;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    
+    .modal {
+        background-color: #e8a612;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px #333;
+        min-width: 320px;
+        position: fixed;
+        left: 50%;
+        padding: 24px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 11;
+
+        .modal-header {
+            display: flex;
+            flex-direction: row-reverse;
+            img {
+                width: 10px;
+                height: 10px;
+            }
+        }
+        
+        .modal-content {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+

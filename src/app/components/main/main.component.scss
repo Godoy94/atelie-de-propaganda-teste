@@ -1,0 +1,234 @@
+.main {
+  background: url("../../assets/background-marrom.png");
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  button {
+    background-color: #e8a612;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 40px;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #d39308;
+  }
+
+  .form-login {
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+
+    input {
+      border: none;
+      border-bottom: 2px solid #fff;
+      width: 100%;
+      color: #fff;
+      background: transparent;
+      outline: none;
+      padding-bottom: 15px;
+      font-size: 20px;
+      margin-bottom: 10px;
+      padding-inline: 0;
+    }
+
+    input::placeholder {
+      color: #fff;
+    }
+
+    .form-login-questions {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      p {
+        color: #e8a612;
+        font-weight: 400;
+        cursor: pointer;
+      }
+
+      p:hover {
+        color: #d39308;
+      }
+    }
+
+    .form-login-button {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .form-register {
+    padding: 30px 0px;
+
+    .form-register-header {
+      margin: 0 0 40px 0;
+      p {
+        line-height: 1px;
+        text-align: center;
+      }
+    }
+
+    label {
+      font-size: 13px;
+    }
+
+    input {
+      border: none;
+      border-bottom: 2px solid #fff;
+      width: 100%;
+      color: #fff;
+      background: transparent;
+      outline: none;
+      padding-bottom: 15px;
+      font-size: 20px;
+      margin-bottom: 10px;
+      padding-inline: 0;
+    }
+
+    input::placeholder {
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .form-register-data {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .align-line {
+        width: 45%;
+      }
+    }
+
+    .form-register-data-select {
+      width: 45%;
+      .align-line-select {
+        display: flex;
+        flex-direction: column;
+        select {
+          border: none;
+          border-bottom: 2px solid #fff;
+          width: 100%;
+          color: #fff;
+          background: transparent;
+          outline: none;
+          padding-bottom: 15px;
+          font-size: 20px;
+          margin-bottom: 10px;
+          padding-inline: 0;
+          cursor: pointer;
+          option {
+            background-color: #e8a612; /* Substitua pela cor desejada */
+            color: #fff; /* Cor do texto nas opções */
+            cursor: pointer;
+          }
+          option:hover {
+            background-color: #d39308;
+          }
+        }
+      }
+    }
+
+    .form-register-button {
+      display: flex;
+      justify-content: center;
+
+      margin: 30px 0;
+    }
+
+    .form-register-question {
+      width: 100%;
+      text-align: center;
+
+      p {
+        color: #e8a612;
+        font-weight: 400;
+        cursor: pointer;
+      }
+
+      p:hover {
+        color: #d39308;
+      }
+    }
+  }
+
+  .modal {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  @media only screen and (max-width: 480px) {
+    .form-login {
+      .form-login-data {
+        display: flex;
+        flex-direction: column;
+      }
+      .form-login-questions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .form-register {
+      .form-register-header {
+        display: flex;
+        flex-direction: column;
+        p {
+          line-height: 1.5rem;
+          margin: 1rem;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .form-register-data-name {
+          width: 45%;
+        }
+        .form-register-data {
+          border: 3px solid;
+          display: contents;
+        }
+
+        .form-register-data-select {
+          
+          .align-line-select {
+            border: 3px solid red;
+
+            select {
+              white-space: normal;
+              word-wrap: break-word;
+              line-height: 1.2;
+              font-size: 20px;
+              option {
+                border: 3px solid red;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
