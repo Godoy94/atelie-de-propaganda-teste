@@ -21,6 +21,6 @@ O projeto foi estruturado da seguinte forma:
 O projeto foi organizado da seguinte forma:
 
 src >
-    assets: Contém imagens e outros recursos estáticos.
-    components: Armazena componentes reutilizáveis da aplicação.
-    services: Inclui serviços utilizados para manipular dados ou lógica de negócios.
+    assets> Contém imagens e outros recursos estáticos.
+    components> Armazena componentes reutilizáveis da aplicação.
+    services> Inclui serviços utilizados para manipular dados ou lógica de negócios.
