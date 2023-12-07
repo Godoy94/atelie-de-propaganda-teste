@@ -1,4 +1,4 @@
-import { Component, OnInit,  ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit,  ElementRef } from '@angular/core';
 import { AuthService } from '../../service/auth.service';
 import { RegisterService } from '../../service/register.service';
 
@@ -7,7 +7,7 @@ import { RegisterService } from '../../service/register.service';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
 })
-export class MainComponent implements OnInit, AfterViewInit {
+export class MainComponent implements OnInit {
   formType: string | null = null;
   isModalOpen = false;  
   classificacoes = ['Gerente', 'Revendedor', 'Distribuidor'];
@@ -32,12 +32,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.authService.formType$.subscribe((type: string | null) => {
       this.formType = type;
-      this.focusOnForm();
     });
-  }
-
-  ngAfterViewInit() {
-    this.focusOnForm();
   }
 
   showRegisterForm() {
@@ -46,15 +41,6 @@ export class MainComponent implements OnInit, AfterViewInit {
 
   showLoginForm() {
     this.authService.setFormType('login');
-  }
-
-  private focusOnForm() {
-    if (this.formType) {
-      const inputElement = this.el.nativeElement.querySelector(`#${this.formType}Form input`);
-      if (inputElement) {
-        inputElement.focus();
-      }
-    }
   }
 
   registerUser() {
