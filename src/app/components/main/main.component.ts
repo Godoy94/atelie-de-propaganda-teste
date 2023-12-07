@@ -50,7 +50,6 @@ export class MainComponent implements OnInit, AfterViewInit {
 
   private focusOnForm() {
     if (this.formType) {
-      // Foca no primeiro input dentro do formulário
       const inputElement = this.el.nativeElement.querySelector(`#${this.formType}Form input`);
       if (inputElement) {
         inputElement.focus();
